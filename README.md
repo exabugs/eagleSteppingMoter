@@ -1,4 +1,3 @@
 # eagleSteppingMoter
 
-
-![stepping](https://cloud.githubusercontent.com/assets/1234874/12529104/0e3ecf0e-c1f0-11e5-9dac-dc76df061c10.png)
+![stepping](https://cloud.githubusercontent.com/assets/1234874/12529212/5f2129f6-c1f2-11e5-93c6-e52d40c31bea.png)
