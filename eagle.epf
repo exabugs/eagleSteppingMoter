@@ -7,10 +7,11 @@ Desktop="Desktop"
 
 [Globals]
 AutoSaveProject=1
+UsedLibrary="library.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="61 70 946 741"
+Loc="92 65 977 736"
 State=2
 Number=0
 

@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -516,6 +516,31 @@ type 0309, grid 12.5 mm</description>
 <pad name="5" x="3.81" y="-7.62" drill="0.8"/>
 <pad name="6" x="6.35" y="-7.62" drill="0.8"/>
 </package>
+<package name="28BYJ-48">
+<circle x="0" y="0" radius="14.080125" width="0.127" layer="21"/>
+<circle x="0" y="9" radius="4.472134375" width="0.127" layer="21"/>
+<circle x="-17.5" y="0" radius="2.12131875" width="0.127" layer="21"/>
+<circle x="17.5" y="0" radius="2.12131875" width="0.127" layer="21"/>
+<wire x1="-24.5" y1="0" x2="29" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="17.5" x2="0" y2="-2.5" width="0.127" layer="21"/>
+<wire x1="0" y1="-2.5" x2="0" y2="-20.5" width="0.127" layer="21"/>
+<pad name="P$1" x="0" y="-17.78" drill="0.8" shape="square"/>
+<pad name="P$2" x="2.54" y="-17.78" drill="0.8" shape="square"/>
+<pad name="P$3" x="5.08" y="-17.78" drill="0.8" shape="square"/>
+<pad name="P$4" x="-2.54" y="-17.78" drill="0.8" shape="square"/>
+<pad name="P$5" x="-5.08" y="-17.78" drill="0.8" shape="square"/>
+</package>
+<package name="LM35">
+<pad name="P$1" x="-2.54" y="0" drill="0.8" shape="square"/>
+<pad name="P$2" x="0" y="0" drill="0.8" shape="square"/>
+<pad name="P$3" x="2.54" y="0" drill="0.8" shape="square"/>
+<wire x1="-3.81" y1="0" x2="-3.81" y2="-1.27" width="0.127" layer="1"/>
+<wire x1="-3.81" y1="-1.27" x2="3.81" y2="-1.27" width="0.127" layer="1"/>
+<wire x1="3.81" y1="-1.27" x2="3.81" y2="0" width="0.127" layer="1"/>
+<wire x1="-3.81" y1="0" x2="3.81" y2="0" width="0.127" layer="1" curve="-180"/>
+<text x="-3.81" y="5.08" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.81" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="+SUPPLY">
@@ -679,14 +704,14 @@ type 0309, grid 12.5 mm</description>
 <pin name="F" x="-12.7" y="-5.08" length="short" direction="out"/>
 <pin name="G" x="-12.7" y="-7.62" length="short" direction="out"/>
 <pin name="H" x="-12.7" y="-10.16" length="short" direction="out"/>
-<pin name="H'" x="12.7" y="-10.16" length="short" direction="out" rot="R180"/>
-<pin name="!SRCLR!" x="12.7" y="0" length="short" direction="in" rot="R180"/>
+<pin name="H'" x="12.7" y="-5.08" length="short" direction="out" rot="R180"/>
+<pin name="!SRCLR!" x="12.7" y="-2.54" length="short" direction="in" rot="R180"/>
 <pin name="SRCLK" x="12.7" y="2.54" length="short" direction="in" rot="R180"/>
 <pin name="RCLK" x="12.7" y="5.08" length="short" direction="in" rot="R180"/>
-<pin name="SER" x="12.7" y="7.62" length="short" direction="in" rot="R180"/>
-<pin name="VCC" x="12.7" y="-2.54" length="short" direction="pwr" rot="R180"/>
-<pin name="GND" x="12.7" y="-7.62" length="short" direction="sup" rot="R180"/>
-<pin name="!OE!" x="12.7" y="-5.08" length="short" direction="pas" rot="R180"/>
+<pin name="SER" x="12.7" y="0" length="short" direction="in" rot="R180"/>
+<pin name="VCC" x="12.7" y="7.62" length="short" direction="pwr" rot="R180"/>
+<pin name="GND" x="12.7" y="-10.16" length="short" direction="sup" rot="R180"/>
+<pin name="!OE!" x="12.7" y="-7.62" length="short" direction="pas" rot="R180"/>
 </symbol>
 <symbol name="8SEG_4DIGITS">
 <wire x1="-5.588" y1="-3.683" x2="-5.334" y2="-3.683" width="0.3048" layer="94"/>
@@ -912,6 +937,32 @@ type 0309, grid 12.5 mm</description>
 <pin name="DIG3" x="-5.08" y="-16.764" length="short" direction="in" rot="R90"/>
 <pin name="DIG4" x="-2.54" y="-16.764" length="short" direction="in" rot="R90"/>
 </symbol>
+<symbol name="28BYJ-48">
+<circle x="0" y="15.24" radius="7.184203125" width="0.254" layer="94"/>
+<circle x="33.02" y="0" radius="5.08" width="0.254" layer="94"/>
+<circle x="-33.02" y="0" radius="5.08" width="0.254" layer="94"/>
+<pin name="1" x="-5.08" y="-38.1" length="middle" rot="R90"/>
+<pin name="2" x="-2.54" y="-38.1" length="middle" rot="R90"/>
+<pin name="3" x="0" y="-38.1" length="middle" rot="R90"/>
+<pin name="4" x="2.54" y="-38.1" length="middle" rot="R90"/>
+<pin name="VCC" x="5.08" y="-38.1" length="middle" rot="R90"/>
+<wire x1="-10.16" y1="-25.4" x2="10.16" y2="-25.4" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-25.4" x2="10.16" y2="-33.02" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-33.02" x2="-10.16" y2="-33.02" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-33.02" x2="-10.16" y2="-25.4" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-25.4" x2="10.16" y2="-25.4" width="0.254" layer="94" curve="-314.332692"/>
+</symbol>
+<symbol name="LM35(温度センサー)">
+<pin name="VS" x="-5.08" y="0" length="point" direction="pwr" rot="R270"/>
+<pin name="VOUT" x="0" y="0" length="point" direction="out" rot="R270"/>
+<pin name="GND" x="5.08" y="0" length="point" direction="sup" rot="R270"/>
+<wire x1="10.16" y1="-10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="-10.16" y2="0" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="10.16" y2="0" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="0" x2="10.16" y2="0" width="0.254" layer="94" curve="-180"/>
+<text x="-10.922" y="-10.16" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="12.7" y="-10.16" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="+3.3V" prefix="SUPPLY">
@@ -1129,6 +1180,43 @@ type 0309, grid 12.5 mm</description>
 <attribute name="OC_FARNELL" value="unknown" constant="no"/>
 <attribute name="OC_NEWARK" value="unknown" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="28BYJ-48">
+<gates>
+<gate name="G$1" symbol="28BYJ-48" x="0" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="28BYJ-48">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+<connect gate="G$1" pin="3" pad="P$3"/>
+<connect gate="G$1" pin="4" pad="P$4"/>
+<connect gate="G$1" pin="VCC" pad="P$5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LM35">
+<description>温度センサー</description>
+<gates>
+<gate name="G$1" symbol="LM35(温度センサー)" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="LM35">
+<connects>
+<connect gate="G$1" pin="GND" pad="P$3"/>
+<connect gate="G$1" pin="VOUT" pad="P$2"/>
+<connect gate="G$1" pin="VS" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
